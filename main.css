@@ -7,7 +7,6 @@ html, body {
   margin: 0;
   border: 0;
   font-family: sans-serif;
-
   background: lightgray;
 }
 
@@ -77,7 +76,6 @@ form p {
 .grid {
     display: grid;
     grid-template: repeat(5, 20vh) / repeat(3, 2fr);
-    /* grid-template: repeat(5, 20vh) / 33% 33% 33%; */
 
     grid-template-areas:  "pic1 pic3 pic2"
                           "pic1 pic3 pic2"
