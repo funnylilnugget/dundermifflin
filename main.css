@@ -10,6 +10,10 @@ html, body {
   background: lightgray;
 }
 
+h1 {
+  text-align: center;
+}
+
 .navbar {
     overflow: hidden;
     background-color: #000000;
@@ -52,39 +56,17 @@ form p {
 
 }
 
-.bulge, .bulge:hover + .bulge {
-    animation: bulge 1s ease-out;
-}
-
-@keyframes bulge {
-    0%{
-        opacity: 0;
-        transform: scale(.8, .8);
-    }
-    20% {
-        opacity: 1;
-        transform: scale(1.2, 1.2);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1, 1);
-    }
-}
-
 /* Grid items */
 
 .grid {
     display: grid;
     grid-template: repeat(5, 20vh) / repeat(3, 2fr);
-
     grid-template-areas:  "pic1 pic3 pic2"
                           "pic1 pic3 pic2"
                           "pic1 pic3 pic2"
                           "txt  txt txt"
                           "txt  txt txt";
-
     width: 100vw;
-
     margin-top: 90px;
 }
 
@@ -96,6 +78,7 @@ div:nth-child(1) {
   height: 100%;
   width: auto;
   background-size: cover;
+  background-clip: border-box;
 }
 
 div:nth-child(2) {
@@ -119,4 +102,29 @@ div:nth-child(4) {
   background-size: cover;
   background-position: center;
   grid-area: txt;
+}
+
+.border:hover
+{
+  box-shadow: inset 0 0 0 25px grey;
+}
+
+#bounce {
+  padding-left: 20px;
+  animation-duration: 2s;
+  animation-name: bounceIn;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
