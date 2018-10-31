@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  border: 0;
+  font-family: sans-serif;
+    background: lightgray;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #000000;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar li {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar li:hover {
+    color: lightgray;
+}
+
+.grid div p {
+  font-size: 25px;
+  }
+
+footer {
+  background: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+}
+
+form p {
+  display: inline;
+
+}
+
+/* Grid items */
+
+.grid {
+    display: inline-grid;
+    grid-template: repeat(4, 2fr) / repeat(3, 2fr);
+    grid-template-areas:  "pic1 pic3 pic2"
+                          "pic1 pic3 pic2"
+                          "txt  txt txt"
+                          "txt  txt txt";
+
+    width: 100vw;
+
+    margin-top: 84px;
+}
+
+div:nth-child(1) {
+  background: url('photo-1.jpg');
+  grid-area: pic1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div:nth-child(2) {
+  background: url('photo-3.jpg');
+  grid-area: pic3;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div:nth-child(3) {
+  background: url('photo-2.jpg');
+  grid-area: pic2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div:nth-child(4) {
+  background: white;
+  background-size: cover;
+  background-position: center;
+  grid-area: txt;
+}
